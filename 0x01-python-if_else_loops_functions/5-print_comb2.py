@@ -6,4 +6,4 @@ for i in range(100):
         else:
             print(f"{i:d}, ", end="")
     else:
-        print(f"{i:d}\n")
+        print(f"{i:d}")
