@@ -2,8 +2,8 @@
 for i in range(100):
     if i < 99:
         if i <= 9:
-            print(f"0{i:d}, ", end = "")
+            print(f"0{i:d}, ", end="")
         else:
-            print(f"{i:d}, ", end = "")
+            print(f"{i:d}, ", end="")
     else:
         print(f"{i:d}\n")
