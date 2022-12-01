@@ -8,7 +8,7 @@ if __name__ == "__main__":
     elif arg_c == 1:
         print("{:d} argument:".format(arg_c))
     else:
-        print("{:d} argument.".format(arg_c))
+        print("{:d} arguments.".format(arg_c))
 
     if arg_c > 0:
         for i in range(1, arg_c + 1):
