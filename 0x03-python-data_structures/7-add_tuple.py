@@ -16,4 +16,8 @@ def add_tuple(tuple_a=(), tuple_b=()):
         new_tuple = (0, 0)
     elif lfl == 1 and lsl == 1:
         new_tuple = (tuple_a[0] + 0, 0 + tuple_b[0])
+    elif lfl == 1 and lsl == 0:
+        new_tuple = (tuple_a[0] + 0, 0)
+    elif lfl == 1 and lsl == 1:
+        new_tuple = (0, 0 + tuple_b[0])
     return new_tuple
