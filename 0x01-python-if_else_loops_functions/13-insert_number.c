@@ -7,24 +7,21 @@
  * @head: pointer to list head pointer
  * @number: list value
  *
- * Retuen: address of new node or NULL if fail
+ * Return: address of new node or NULL if fail
  */
 
 listint_t *insert_node(listint_t **head, int number)
 {
-	listint_t *temp, *temp2, *new;
+	listint_t *temp, *h, *temp2, *new;
 
 	new = (listint_t *)malloc(sizeof(listint_t));
 	if (new == NULL)
 		return (NULL);
 	new->n = number;
 	new->next = NULL;
-	temp = *head;
+	temp = h = *head;
 	if (*head == NULL)
-	{
 		*head = new;
-		return (*head);
-	}
 	else if (temp->next == NULL)
 	{
 		if (temp->n > new->n)
@@ -34,6 +31,11 @@ listint_t *insert_node(listint_t **head, int number)
 		}
 		else
 			temp->next = new;
+	}
+	if (temp->n > new->n)
+	{
+		new->next = temp;
+		*head = new;
 	}
 	while (temp->next != NULL)
 	{
@@ -46,6 +48,7 @@ listint_t *insert_node(listint_t **head, int number)
 		}
 		temp = temp->next;
 	}
-	temp->next = new;
+	if (temp->next == NULL)
+		temp->next = new;
 	return (new);
 }
