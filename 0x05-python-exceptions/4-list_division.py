@@ -12,8 +12,8 @@ def list_division(my_list_1, my_list_2, list_length):
         except TypeError:
             print("wrong type")
         finally:
-            if quot:
+            if quot or quot == 0:
                 newList.append(round(quot, 1))
             else:
-                newList.append(0.0)
+                newList.append(0)
     return newList
