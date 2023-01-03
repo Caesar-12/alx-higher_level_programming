@@ -9,12 +9,15 @@ Defines a class -> Rectangle
 class Rectangle:
     """
     Class: Rectangle
-    Declares 2 class attributes and 2 methods
+    Declares 2 private class attributes, 1 public class and 8 methods
     """
+
+    number_of_instances = 0
 
     def __init__(self, width=0, height=0):
         self.width = width
         self.height = height
+        Rectangle.number_of_instances += 1
 
     @property
     def width(self):
@@ -59,3 +62,10 @@ class Rectangle:
             shapeList.append("#" * self.__width)
         rec = "\n".join(shapeList)
         return rec
+
+    def __repr__(self):
+        return "Rectangle("+str(self.__width)+", "+str(self.__height)+")"
+
+    def __del__(self):
+        Rectangle.number_of_instances -= 1
+        print("Bye rectangle...")

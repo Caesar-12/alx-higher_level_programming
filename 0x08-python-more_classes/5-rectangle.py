@@ -9,7 +9,7 @@ Defines a class -> Rectangle
 class Rectangle:
     """
     Class: Rectangle
-    Declares 2 class attributes and 2 methods
+    Declares 2 class attributes and 8 methods
     """
 
     def __init__(self, width=0, height=0):
@@ -59,3 +59,9 @@ class Rectangle:
             shapeList.append("#" * self.__width)
         rec = "\n".join(shapeList)
         return rec
+
+    def __repr__(self):
+        return "Rectangle("+str(self.__width)+", "+str(self.__height)+")"
+
+    def __del__(self):
+        print("Bye rectangle...")
