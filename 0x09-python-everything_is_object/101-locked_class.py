@@ -14,6 +14,3 @@ class LockedClass():
     """
 
     __slots__ = ['first_name']
-
-    def __init__(self, name):
-        self.firstname = name
