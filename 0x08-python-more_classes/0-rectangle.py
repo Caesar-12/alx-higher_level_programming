@@ -5,12 +5,11 @@ Module: 0-rectangle.py
 Defines  rectangle class
 """
 
-class Rectangle:
 
+class Rectangle:
     """
     Class: Rectangle
     Empty class
     """
-
 
     pass
