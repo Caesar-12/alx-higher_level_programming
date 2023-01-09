@@ -1,4 +1,9 @@
 #!/usr/bin/python3
+"""
+Module: 1-my_list 
+subclass of list that prints list sorted
+"""
+
 
 class MyList(list):
 
