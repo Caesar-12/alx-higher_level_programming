@@ -6,7 +6,7 @@ creates an object from json strings in a file
 
 
 import json
-from io import  StringIO
+from io import StringIO
 
 
 def load_from_json_file(filename):
