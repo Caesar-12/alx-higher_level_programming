@@ -4,9 +4,8 @@ const Squarepar = require('./5-square');
 
 module.exports = class Square extends Squarepar {
   constructor (size) {
-    super();
+    super(size);
     this.size = size;
-    /* console.log(this.size); */
   }
 
   charPrint (c) {
