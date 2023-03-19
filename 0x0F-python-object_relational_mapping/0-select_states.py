@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 """
-Contains module that lists states in hbtn_0e_0_usa database
+Contains module that lists states in the hbtn_0e_0_usa database
 """
 
 
