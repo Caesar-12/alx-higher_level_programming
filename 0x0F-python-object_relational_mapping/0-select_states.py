@@ -9,6 +9,6 @@ if __name__ == "__main__":
     import MySQLdb
     from sys import argv
 
-    db = MySQLdb.connect('localhost:3306', argv[1], argv[2], argv[3])
+    db = MySQLdb.connect('localhost 3306', argv[1], argv[2], argv[3])
     cur = db.cursor()
     cur.execute('SELECT * FROM states ORDER BY id')
