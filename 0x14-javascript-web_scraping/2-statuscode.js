@@ -9,6 +9,6 @@ if (!url) {
 
 request(url, function (error, response, body) {
   if (!error) {
-    console.log(response.statusCode);
+    console.log('code: ' + response.statusCode);
   }
 });
