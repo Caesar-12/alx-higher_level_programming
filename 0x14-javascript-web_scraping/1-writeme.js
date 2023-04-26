@@ -2,16 +2,14 @@
 
 const fs = require('fs');
 const fileName = process.argv[2];
+const string = process.argv[3];
 
-if (!fileName) {
+if (!fileName || !string) {
   process.exit(1);
 }
 
-fs.readFile(fileName, 'utf8', (err, data) => {
+fs.writeFile(fileName, string, (err) => {
   if (err) {
-    console.error(err);
     process.exit(1);
   }
-
-  console.log(data);
 });
